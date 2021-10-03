@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://w7.pngwing.com/pngs/840/503/png-transparent-computer-icons-checkbox-check-mark-others-miscellaneous-cdr-angle.png" type="image/gif" sizes="16x16">
+    <title>Checkbox Estilizado</title>
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: black;
+    }
+
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    input[type="checkbox"]{
+        position: relative;
+        width: 80px;
+        height: 40px;
+        appearance: none;
+        background-color: #c6c6c6;
+        border-radius: 20px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    input:checked[type="checkbox"]{
+        background-color: #03a9f4;
+        transition: 1.5s;
+    }
+
+    input[type="checkbox"]:before{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: 500ms;
+    }
+
+    input:checked[type="checkbox"]::before{
+        left: 40px;
+    }
+
+
+
+
+</style>
+
+<body>
+
+    <div class="center">
+        <input type="checkbox" name="checkbox">
+    </div>
+
+</body>
+</html>
